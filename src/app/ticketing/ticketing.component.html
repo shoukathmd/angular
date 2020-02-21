@@ -29,7 +29,7 @@
                 <mat-dialog-content>
                   <form [formGroup]="ticketingForm" class="w-100"> 
                 <mat-form-field class="w-100">
-                  <input [(ngModel)]="category" [ngModelOptions]="{standalone: true}" matInput placeholder="Category" formControlName="category">
+                  <input [(ngModel)]="category" matInput placeholder="Category" formControlName="category">
                   <mat-error>Required</mat-error>
                 </mat-form-field>
                 
@@ -40,7 +40,7 @@
                 
                 <mat-form-field class="w-100" appearance="fill">
                     <mat-label>Description</mat-label>
-                    <textarea [(ngModel)]="description" [ngModelOptions]="{standalone: true}" matInput  formControlName="description"></textarea>
+                    <textarea [(ngModel)]="description" matInput  formControlName="description"></textarea>
                   </mat-form-field>
                 
                 
