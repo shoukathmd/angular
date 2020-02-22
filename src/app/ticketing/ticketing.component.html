@@ -1,51 +1,26 @@
-<!-- <form class="w-100">
-    <mat-grid-list cols="1" rowHeight="100px">
-        <mat-grid-tile>
-            <mat-form-field>
-                <input matInput formControlName="email" placeholder="category">
-            </mat-form-field>   
-        </mat-grid-tile>
+<div class="row">
+  <div class="col-md-9">
+    <h4>Add New ticket</h4>
+  </div>
+  <div class="col-md-3">
+    <button mat-button class="float-right" mat-dialog-close><i class="material-icons">close</i></button>
+  </div>
+</div>
 
-        <mat-grid-tile>
-            <mat-form-field appearance="fill">
-                <mat-label>Textarea</mat-label>
-                <textarea matInput></textarea>
-              </mat-form-field>
-            </mat-grid-tile>
-            <button mat-raised-button color="primary" (click)="closeDialog()">close</button>
+<mat-dialog-content>
+  <form [formGroup]="ticketingForm" class="w-100">
+    <mat-form-field class="w-100">
+      <input [(ngModel)]="category" matInput placeholder="Category" formControlName="category">
+      <mat-error>Required</mat-error>
+    </mat-form-field>
 
-            </mat-grid-list>
-            </form> -->
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea [(ngModel)]="description" matInput formControlName="description"></textarea>
+    </mat-form-field>
 
-            <div class="row">
-                <div class="col-md-9">
-                <h4>Add New ticket</h4>
-                </div>
-                <div class="col-md-3">
-                <button mat-button class="float-right" mat-dialog-close><i class="material-icons">close</i></button>
-                </div>
-                </div>
-                
-                <mat-dialog-content>
-                  <form [formGroup]="ticketingForm" class="w-100"> 
-                <mat-form-field class="w-100">
-                  <input [(ngModel)]="category" matInput placeholder="Category" formControlName="category">
-                  <mat-error>Required</mat-error>
-                </mat-form-field>
-                
-                <!-- <mat-form-field class="full-width">
-                  <input matInput placeholder="Description" formControlName="areaCode">
-                  <mat-error>Required</mat-error>
-                </mat-form-field> -->
-                
-                <mat-form-field class="w-100" appearance="fill">
-                    <mat-label>Description</mat-label>
-                    <textarea [(ngModel)]="description" matInput  formControlName="description"></textarea>
-                  </mat-form-field>
-                
-                
-                </form>
-                </mat-dialog-content>
-                <button mat-raised-button color="primary" (click)="submit()">Save</button>
-                <button mat-button>Cancel</button>
-                
+
+  </form>
+</mat-dialog-content>
+<button mat-raised-button color="primary" (click)="submit()">Save</button>
+<button mat-button>Cancel</button>

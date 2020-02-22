@@ -17,6 +17,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { NotificationService } from './services/notification.service'
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import {MatIconModule} from '@angular/material/icon';
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    
+    MatSnackBarModule
+
+
   ],
   exports:[
     MatFormFieldModule,
