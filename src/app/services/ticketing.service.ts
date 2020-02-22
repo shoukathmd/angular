@@ -15,9 +15,7 @@ export class TicketingService {
     // });
   }
 
-  postJSON(ticketing): Observable<any> {
-    return this.http.post('../../assets/ticketing-data.json', ticketing);
-  }
+
 
   getAPI(): Observable<any> {
     return this.http.get(this.privateUrl);
