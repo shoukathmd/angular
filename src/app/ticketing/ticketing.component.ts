@@ -11,38 +11,38 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./ticketing.component.css']
 })
 export class TicketingComponent implements OnInit {
-  category: string;
-  description: string;
+ 
+  submitData = { 
+    category:'',
+    description:''
+  }
+
   postTicketing: Ticketing = new Ticketing()
   ticketingForm: FormGroup;
 
-  constructor(private dialog: MatDialog,
-              private ticketingService: TicketingService,
-              private formBuilder: FormBuilder,
-              private notificationService:NotificationService,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
-  }
+  constructor(private notificationService:NotificationService, private ticketingService:TicketingService,  private formBuilder: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: any,private dialog: MatDialog,
+    public dialogRef:MatDialogRef<TicketingComponent>,
+         ){
+          this.ticketingForm = this.formBuilder.group({
+            category: ['', Validators.required],
+            description: ['', Validators.required],
+          })
+     }
 
   ngOnInit(): void {
-
-    this.ticketingForm = this.formBuilder.group({
-      category: ['', Validators.required],
-      description: ['', Validators.required],
-
-    })
   }
+  submit(){
+this.ticketingService.postAPI(this.submitData).subscribe(results=>{
+  this.notificationService.success(':: Submitted Successfully');
 
-  closeDialog() {
-    this.ticketingForm.reset();
-  }
+})
+   this.dialogRef.close();
 
-  submit() {
-    this.postTicketing.category = this.category;
-    this.postTicketing.description = this.description
-    console.log("submit post data");
-    this.ticketingService.postAPI(this.postTicketing);
-    this.ticketingForm.reset();
-    this.notificationService.success(':: Submitted Successfully');
   }
+  
+
+
+ 
 
 }

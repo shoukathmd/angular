@@ -17,20 +17,23 @@ export class TicketingListComponent implements OnInit {
     private dialog:MatDialog) { }
 
   ngOnInit(): void {
-    this.ticketingService.getAPI().subscribe(results => {
-      console.log(results);
-      
-      this.dataSource = results['data'];
-      
-      // console.log(this.dataSource)
-      
-  });
+  this.getTicketsDetails();
   }
-  openDialog(){
-     this.dialog.open(TicketingComponent,{
-      width:"700px"
+  getTicketsDetails(){
+    this.ticketingService.getAPI().subscribe(results => {
+      // console.log(results);
+      this.dataSource = results;
     });
   }
-
-
+  openDialog(){
+    const dialogRef= this.dialog.open(TicketingComponent,{
+     width:"700px"
+     
+   });
+   dialogRef.afterClosed().subscribe(result => {
+    this.getTicketsDetails();
+   });
+ }
 }
+
+

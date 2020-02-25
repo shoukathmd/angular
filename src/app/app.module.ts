@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { NotificationService } from './services/notification.service'
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSortModule
 
 
   ],

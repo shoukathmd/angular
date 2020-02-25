@@ -1,0 +1,119 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "category": "json-server",
+      "description": "typicode"
+    },
+    {
+      "category": "Testing Category",
+      "description": "kjk",
+      "id": 2
+    },
+    {
+      "category": "dw",
+      "description": "wdw",
+      "id": 3
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 4
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 5
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 6
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 7
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 8
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 9
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 10
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 11
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 12
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 13
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 14
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 15
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 16
+    },
+    {
+      "category": "post hoja bhai",
+      "description": "good",
+      "id": 17
+    },
+    {
+      "category": "aa",
+      "description": "a",
+      "id": 18
+    },
+    {
+      "category": "aa",
+      "description": "a",
+      "id": 19
+    },
+    {
+      "category": "aa",
+      "description": "ss",
+      "id": 20
+    },
+    {
+      "category": "ss",
+      "description": "ss",
+      "id": 21
+    },
+    {
+      "category": "faiyaz bhai",
+      "description": "medak",
+      "id": 22
+    },
+    {
+      "category": "dd",
+      "description": "dd",
+      "id": 23
+    }
+  ]
+}
