@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TicketingService } from '../../services/ticketing.service'
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { TicketingComponent } from '../ticketing.component';
+import { EditTicketingComponent } from '../edit-ticketing/edit-ticketing.component';
 
 @Component({
   selector: 'app-ticketing-list',
@@ -34,6 +35,16 @@ export class TicketingListComponent implements OnInit {
     this.getTicketsDetails();
    });
  }
+
+ openEditDialog(element){
+  const dialogRef= this.dialog.open(EditTicketingComponent,{
+   width:"700px", data : element
+ });
+ dialogRef.afterClosed().subscribe(result => {
+  this.getTicketsDetails();
+ });
+}
+
 }
 
 

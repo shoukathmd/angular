@@ -1,0 +1,28 @@
+
+<div class="row">
+    <div class="col-md-9">
+      <h4>Add New ticket</h4>
+    </div>
+    <div class="col-md-3">
+      <button mat-button class="float-right" mat-dialog-close><i class="material-icons">close</i></button>
+    </div>
+  </div>
+  
+  <mat-dialog-content>
+    <form [formGroup]="ticketingForm" class="w-100">
+      <mat-form-field class="w-100">
+        <input [(ngModel)]="data.category" matInput placeholder="Category" formControlName="category">
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="w-100" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea [(ngModel)]="data.description" matInput formControlName="description"></textarea>
+      </mat-form-field>
+  
+  
+    </form>
+  <button mat-raised-button color="primary" [disabled]="ticketingForm.invalid" (click)="Edit()">submit</button>
+  <button class="ml-2" mat-button>Clear</button>
+  </mat-dialog-content>
+  

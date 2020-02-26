@@ -7,8 +7,8 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class TicketingService {
-  private privateUrl = '/api/v1/ticket';
-  // private privateUrl = 'http://localhost:3000/posts';
+  // private privateUrl = '/api/v1/ticket';
+  private privateUrl = 'http://localhost:8080/api/v1/ticket';
 
   constructor(private http: HttpClient) {
     // this.getJSON().subscribe(data => {
@@ -25,6 +25,9 @@ export class TicketingService {
 
 
   postAPI(ticketing) {
-    return this.http.post<any>("http://localhost:8080/api/v1/ticket", ticketing).subscribe();
+    return this.http.post<any>(this.privateUrl, ticketing).subscribe();
+  }
+  putAPI(ticketing) {
+    return this.http.put<any>(this.privateUrl + "/" + ticketing['id'] , ticketing);
   }
 }

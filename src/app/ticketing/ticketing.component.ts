@@ -33,14 +33,14 @@ export class TicketingComponent implements OnInit {
   ngOnInit(): void {
   }
   submit(){
-this.ticketingService.postAPI(this.submitData).subscribe(results=>{
+this.ticketingService.postAPI(this.submitData).add(results=>{
   this.notificationService.success(':: Submitted Successfully');
 
 })
    this.dialogRef.close();
 
   }
-  
+ 
 
 
  

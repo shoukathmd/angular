@@ -20,13 +20,15 @@ import {MatIconModule} from '@angular/material/icon';
 import { NotificationService } from './services/notification.service'
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSortModule} from '@angular/material/sort';
+import { EditTicketingComponent } from './ticketing/edit-ticketing/edit-ticketing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TicketingComponent,
-    TicketingListComponent
+    TicketingListComponent,
+    EditTicketingComponent
   ],
   imports: [
     BrowserModule,
